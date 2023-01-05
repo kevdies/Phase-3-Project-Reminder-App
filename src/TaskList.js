@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function TaskContainer(){
+function TaskList(){
 
 
 
@@ -12,4 +12,4 @@ function TaskContainer(){
     )
 }
 
-export default TaskContainer
+export default TaskList
