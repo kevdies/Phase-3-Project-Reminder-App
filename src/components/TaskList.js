@@ -1,5 +1,5 @@
 import React from 'react'
-import Task from './Task'
+import Task from './TaskCard'
 
 function TaskList({ tasks }) {
 console.log(tasks)

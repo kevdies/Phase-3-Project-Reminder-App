@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from'react'
-import Header from './Header.js'
+
 import TaskForm from './TaskForm.js'
 import TaskList from './TaskList.js'
-import Task from './Task.js'
+// import Task from './Task.js'
 
 
 function App() {
@@ -20,9 +20,8 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <TaskList tasks={tasks} />
       <TaskForm />
+      <TaskList tasks={tasks} />
     </div>
   );
 }

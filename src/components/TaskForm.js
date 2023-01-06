@@ -12,7 +12,6 @@ function TaskForm(){
 
     return (
         <Form>
-        <Form.Label>Add New Task Here</Form.Label>
         <input
           type='text'
           placeholder='Task'
@@ -25,7 +24,7 @@ function TaskForm(){
           type='text'
           placeholder='Category'
         />
-        <Button variant="primary" type="submit">
+        <Button variant="info" type="submit">
         A D D | | T A S K
       </Button>
     </Form>
