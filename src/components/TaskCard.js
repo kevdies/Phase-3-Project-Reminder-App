@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 function Task({ eachTask, number }) {
   return (
@@ -14,7 +15,13 @@ function Task({ eachTask, number }) {
         <Card.Body>
           <Card.Title> Task #{number} </Card.Title>
           <Card.Text>{eachTask}</Card.Text>
-          <Card.Footer></Card.Footer>
+          <Card.Text>
+            <Button variant="dark">🗑️</Button>
+          </Card.Text>
+          <Card.Text>
+            <Button variant="dark">✏</Button>
+          </Card.Text>
+
         </Card.Body>
       </Card>
     </div>
