@@ -26,7 +26,7 @@ function TaskForm(){
           placeholder='Category'
         />
         <Button variant="primary" type="submit">
-        Submit
+        A D D | | T A S K
       </Button>
     </Form>
     )
