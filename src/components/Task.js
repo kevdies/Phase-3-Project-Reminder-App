@@ -1,13 +1,23 @@
 import React from 'react'
 
-function Tasks(){
+
+function Task({key, eachTask}){
 
 
-    return(
-        <div>
-            each task here
-        </div>
-    )
+  return (
+    <div className="card">
+      <div className="details">
+        <p>{eachTask}</p>
+        <button className="emoji-button delete">
+          🗑
+        </button>
+        <button className="emoji-button edit">
+          ✎
+          </button>
+      </div>
+    </div>
+  );
 }
 
-export default Tasks;
+export default Task;
+

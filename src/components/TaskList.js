@@ -1,13 +1,18 @@
 import React from 'react'
+import Task from './Task'
 
-
-function TaskList(){
-
-
-
+function TaskList({ tasks }) {
+// console.log(tasks)
     return(
-        <div>
-            task list here
+        <div className="each-task">
+            {tasks.map((eachTask) => (
+                <Task
+                    key={eachTask.id}
+                    eachTask={eachTask.description}
+                    // day={eachTask.day_id}
+                    // category={eachTask.category_id}
+                />
+           ))}
         </div>
     )
 }
