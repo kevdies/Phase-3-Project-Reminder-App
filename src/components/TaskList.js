@@ -1,5 +1,5 @@
 import React from "react";
-import Task from "./TaskCard";
+import Task from "./Task";
 
 function TaskList({ tasks }) {
   console.log(tasks);
@@ -10,8 +10,8 @@ function TaskList({ tasks }) {
           key={eachTask.id}
           number={index + 1}
           eachTask={eachTask.description}
-          day={eachTask.day_id}
-          category={eachTask.category_id}
+        //   day={eachTask.day_id}
+        //   category={eachTask.category_id}
         />
       ))}
     </div>

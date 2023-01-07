@@ -19,7 +19,7 @@ function Task({ eachTask, number }) {
             <Button variant="dark">🗑️</Button>
           </Card.Text>
           <Card.Text>
-            <Button variant="dark">✏</Button>
+            <Button class="card button-center" variant="dark">✏</Button>
           </Card.Text>
 
         </Card.Body>
