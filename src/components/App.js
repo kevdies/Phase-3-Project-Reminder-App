@@ -4,15 +4,20 @@ import TaskList from "./TaskList.js";
 
 
 function App() {
-const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState([])
+
+
 
   useEffect(() => {
     fetch("http://localhost:9292/tasks")
       .then((res) => res.json())
-      .then((tasksDB) => setTasks(tasksDB));
+      .then((tasksDB) => setTasks(tasksDB))
   }, []);
 
-console.table(tasks)
+  console.log(tasks)
+
+
+
 
   return (
     <div className="App">
@@ -23,3 +28,8 @@ console.table(tasks)
 }
 
 export default App;
+
+
+//eachTask.description and .id
+//eachTask.category{id: , urgent: }
+//eachTask.day{id: , day_of_week: }

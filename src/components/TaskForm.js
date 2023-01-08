@@ -9,10 +9,11 @@ import Form from "react-bootstrap/Form";
 
 
 function TaskForm({ tasks, setTasks }) {
-console.table(tasks)
+// console.table(tasks)
+
   const [formTask, setFormTask] = useState("")
-  const [category, setCategory] = useState(1)
-  const [day, setDay] = useState(1)
+  const [category, setCategory] = useState("Urgent")
+  const [day, setDay] = useState("Monday")
 
   // function handleCategoryChange(event) {
   //   setCategory(event.target.value)
@@ -28,7 +29,7 @@ console.table(tasks)
 
    const onTaskFormSubmit = (newTask) => {
      const newTasks = [...tasks, newTask];
-     setTasks(newTasks);
+    //  setTasks(newTasks);
    };
 
   const handleSubmit = (event) => {
@@ -40,11 +41,12 @@ console.table(tasks)
       },
       body: JSON.stringify({
         "description": formTask,
-        "category_id": category,
-        "day_id": day,
+        "category": category,
+        "day_id": day
+
       })
     }).then((response) => response.json())
-    .then((response) =>onTaskFormSubmit(response))
+    .then((response) => onTaskFormSubmit(response))
   }
 
   return (
@@ -55,13 +57,13 @@ console.table(tasks)
         <label>
           Select Day:
           <select name='day_of_week' value={day} onChange={(e) => setDay(e.target.value)}>
-            <option value="1">Monday</option>
-            <option value="2">Tuesday</option>
-            <option value="3">Wednesday</option>
-            <option value="4">Thursday</option>
-            <option value="5">Friday</option>
-            <option value="6">Saturday</option>
-            <option value="7">Sunday</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
           </select>
         </label>
 
@@ -72,8 +74,8 @@ console.table(tasks)
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
-          <option value="1">Urgent</option>
-          <option value="2">Non Urgent</option>
+          <option value="Urgent">Urgent</option>
+          <option value="Non Urgent">Non Urgent</option>
 
         </select>
         </label>

@@ -10,8 +10,8 @@ function TaskList({ tasks }) {
           key={eachTask.id}
           number={index + 1}
           eachTask={eachTask.description}
-        //   day={eachTask.day_id}
-        //   category={eachTask.category_id}
+          weekday={eachTask.day.day_of_week}
+          urgency={eachTask.category.urgent}
         />
       ))}
     </div>

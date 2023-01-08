@@ -2,7 +2,9 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-function Task({ eachTask, number }) {
+function Task({ eachTask, weekday, urgency, number }) {
+
+  // console.log(urgency)
   return (
     <div className="task-container">
       <Card
@@ -15,12 +17,11 @@ function Task({ eachTask, number }) {
         <Card.Body>
           <Card.Title> Task #{number} </Card.Title>
           <Card.Text>{eachTask}</Card.Text>
-          <Card.Text>
+          <Card.Text>{weekday}</Card.Text>
+          <Card.Text>{urgency ? "Urgent" : "Non Urgent"}</Card.Text>
+
             <Button variant="dark">🗑️</Button>
-          </Card.Text>
-          <Card.Text>
-            <Button class="card button-center" variant="dark">✏</Button>
-          </Card.Text>
+            <Button variant="dark">✏</Button>
 
         </Card.Body>
       </Card>
